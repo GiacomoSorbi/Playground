@@ -279,23 +279,6 @@ a.register-btn-nav:hover {
       .overlay ul li a.short {
         width: auto; }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-  list-style-type: none; }
-
-li .list-number {
-  background-color: #00acd4;
-  color: white;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 20px; }
-
 /*****************************
  HOME SECTION - CANVAS + INTRO
 ******************************/
@@ -450,6 +433,36 @@ CANVAS HOMEPAGE
 .intro-body, .process-body {
   text-align: center; }
 
+/*  DIAGRAM --- fix vertical align */
+.legend {
+  display: table; }
+
+.legend ul {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle; }
+
+ul li[id^="diagram-legend-"] {
+  position: relative;
+  list-style: none;
+  padding-left: 50px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 30px; }
+
+span.list-number {
+  background-color: #00acd4;
+  color: white;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10px; }
+
 /*****************************
 MEDIA QUERY RESPONSIVE RESPONSIVE
 ******************************/
@@ -473,6 +486,7 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
 /*****************************
  CSS3 ANIMATIONS
 ******************************/
+/* animation local scroll */
 @keyframes fadeInDown {
   0% {
     opacity: 0;

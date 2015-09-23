@@ -14,7 +14,6 @@ p {
   font-size: 16px;
 }
 
-
 /*****************************
 COMMON ELEMENTS
 ******************************/
@@ -31,8 +30,9 @@ COMMON ELEMENTS
   postion: relative
 }
 
-.clear {clear:both}
-
+.clear {
+  clear: both
+}
 
 /*****************************
  MAIN MENU - STICKY MENU
@@ -45,15 +45,20 @@ COMMON ELEMENTS
   background-color: rgba(0, 0, 0, 0);
   color: #FFF;
   z-index: 998;
-  left:0;
-  top:0;
-  right:0;
+  left: 0;
+  top: 0;
+  right: 0;
   position: fixed;
   padding-top: 15px;
 }
 
-#main-nav{ transition: 1s ease all;}
-#main-nav.scrolling {background-color: rgba(0, 0, 0, 1);} 
+#main-nav {
+  transition: 1s ease all;
+}
+
+#main-nav.scrolling {
+  background-color: rgba(0, 0, 0, 1);
+}
 
 #nav-logo-wrap a img {
   width: 200px
@@ -104,23 +109,23 @@ COMMON ELEMENTS
 
 #nav-page-section ul li a:hover {
   border-top: 4px solid #00ACD4;
-  color:#fff;
+  color: #fff;
   text-transform: uppercase;
   padding-top: 20px;
 }
 
 .separator-menu {
-  float:left;
-  height:25px;
-  background:#FFF;
-  display:block;
-  width:1px;
-  margin:-3px 0 0 40px;
+  float: left;
+  height: 25px;
+  background: #FFF;
+  display: block;
+  width: 1px;
+  margin: -3px 0 0 40px;
 }
 
 a.submit-btn-nav {
   color: #00ACD4;
-  margin-left:0 !important;
+  margin-left: 0 !important;
 }
 
 a.submit-btn-nav:hover {
@@ -167,6 +172,7 @@ a.register-btn-nav:hover {
   float: right;
   z-index: 9999;
 }
+
 .button-user:before {
   display: inline-block;
   content: "";
@@ -186,8 +192,6 @@ a.register-btn-nav:hover {
   left: -25px;
 }
 
-
-
 /*HAMBURGER MENU*/
 
 $color-main: #262b2e;
@@ -199,34 +203,34 @@ $button-height: 26px;
 $button-width: 30px;
 
 .overlay-menu ul li a {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    overflow: hidden;
-    top: 5px;
-    
-    &:after {
-      content: '';
-      position: absolute;
-      background: $color-main;
-      height: 2px;
-      width: 0%;
-      transform: translateX(-50%);
-      left: 50%;
-      bottom: 0;
-      transition: .35s ease;
-    }
-    &:hover:after,
-    &:focus:after,
-    &:active:after {
-      width: 100%;
-    }
- }
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  top: 5px;
 
-.button_container{
+  &:after {
+    content: '';
+    position: absolute;
+    background: $color-main;
+    height: 2px;
+    width: 0%;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    transition: .35s ease;
+  }
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
+    width: 100%;
+  }
+}
+
+.button_container {
   position: fixed;
   top: 18px;
   right: 18px;
@@ -235,11 +239,11 @@ $button-width: 30px;
   cursor: pointer;
   z-index: 9999;
   transition: opacity .25s ease;
-  
+
   &:hover {
     opacity: .7;
   }
-  
+
   &.active {
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
@@ -249,28 +253,28 @@ $button-width: 30px;
       opacity: 0;
       background: $color-active;
     }
-    
+
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: $color-active;
     }
   }
-  
+
   span {
-  background: $color-closed;
-  border: none;
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
-    
+    background: $color-closed;
+    border: none;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+
     &:nth-of-type(2) {
       top: 11px;
     }
-    
+
     &:nth-of-type(3) {
       top: 22px;
     }
@@ -289,19 +293,18 @@ $button-width: 30px;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-  
+
   &.open {
     opacity: .9;
     visibility: visible;
     height: 100%;
-    
+
     li {
       display: block;
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s;
       text-transform: uppercase;
 
-      
       &:nth-of-type(2) {
         animation-delay: .4s;
       }
@@ -330,14 +333,14 @@ $button-width: 30px;
     position: relative;
     height: 100%;
     width: 100%;
-    
+
     li {
       display: block;
       height: 25%;
       min-height: 50px;
       position: relative;
       opacity: 0;
-      
+
       a {
         font-weight: 300;
         display: inline-block;
@@ -346,33 +349,16 @@ $button-width: 30px;
         text-decoration: none;
         overflow: hidden;
         width: 100%;
-        
-        &:hover{
-          color:#00ACD4;
-         }
+
+        &:hover {
+          color: #00ACD4;
+        }
       }
-      a.short {width: auto;}
+      a.short {
+        width: auto;
+      }
     }
   }
-}
-
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-  list-style-type: none;
-}
-
-li .list-number {
-  background-color: #00acd4;
-  color: white;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 20px;
 }
 
 /*****************************
@@ -438,6 +424,7 @@ li .list-number {
   font-weight: 300;
   margin-top: 30px;
 }
+
 /*****************************
 SCROLL HOMEPAGE
 ******************************/
@@ -488,6 +475,7 @@ i.fa-chevron-down {
   left: 50%;
   margin-left: -11.5px
 }
+
 /*****************************
 CANVAS HOMEPAGE
 ******************************/
@@ -498,6 +486,7 @@ CANVAS HOMEPAGE
   height: 100%;
   z-index: 1;
 }
+
 /*****************************
  PAGE ELEMENTS
 ******************************/
@@ -508,17 +497,21 @@ CANVAS HOMEPAGE
   display: block;
   position: relative;
   box-sizing: border-box;
-  padding:80px 0; 
+  padding: 80px 0;
 }
 
-.bkg-white {background-color:#fff}
-.bkg-gray {background-color:#f9f9f9}
+.bkg-white {
+  background-color: #fff
+}
 
+.bkg-gray {
+  background-color: #f9f9f9
+}
 
 .container {
   /*temp: @media (min-width: 1200px) */
   width: 1170px;
-  /**/  
+  /**/
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -526,64 +519,99 @@ CANVAS HOMEPAGE
   position: relative;
 }
 
-.container h2{
-    margin-bottom:80px; position: relative;
+.container h2 {
+  margin-bottom: 80px;
+  position: relative;
 }
 
-.container h2:after{ 
-    content: "";
-    position: absolute;
-    height: 1px;
-    border-bottom: 1px solid #00ACD4;
-    top: 80px;
-    width: 80px;
-    left: 45%;
-    margin-left: 15px;
+.container h2:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: 1px solid #00ACD4;
+  top: 80px;
+  width: 80px;
+  left: 45%;
+  margin-left: 15px;
 }
 
 .intro-body, .process-body {
-  text-align:center;
+  text-align: center;
 }
 
+/*  DIAGRAM --- fix vertical align */
+
+.legend {
+  display: table;
+}
+
+.legend ul {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+ul li[id^="diagram-legend-"] {
+  position: relative;
+  list-style: none;
+  padding-left: 50px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+span.list-number {
+  background-color: #00acd4;
+  color: white;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
 
 /*****************************
 MEDIA QUERY RESPONSIVE RESPONSIVE
 ******************************/
 
-
-@media only screen and (min-width : 1200px)  {
+@media only screen and (min-width: 1200px) {
   .button_container, #overlay, .button-user {
     display: none;
   }
-  #nav-tools-section, #nav-page-section{
-    display:inline;
+  #nav-tools-section, #nav-page-section {
+    display: inline;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  .button_container {display: block;}
-  .button-user {display: inline-block; margin-right: 10px;}
-  #nav-tools-section, #nav-page-section, .separator-menu{
-    display:none;
+  .button_container {
+    display: block;
+  }
+  .button-user {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  #nav-tools-section, #nav-page-section, .separator-menu {
+    display: none;
   }
 }
 
 /* TODO: hide login login/registration below query tablet and mobile  */
 
-
-
-
-
 /*****************************
  CSS3 ANIMATIONS
 ******************************/
 
-
+/* animation local scroll */
 @keyframes fadeInDown {
   0% {
     opacity: 0;
     transform: translate3d(0, -100%, 0);
-    top: 30px
+    top: 30px;
   }
   50% {
     opacity: 1;
@@ -596,7 +624,6 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
     top: 32px
   }
 }
-
 
 @keyframes fadeInRight {
   0% {
