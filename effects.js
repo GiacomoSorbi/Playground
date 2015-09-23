@@ -1,5 +1,10 @@
 var MyModule;
 $(function() {
+    
+    $('#toggle').click(function() {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+    });
 
   //generate random int a<=x<=b
   function randint(a, b) {
@@ -365,10 +370,4 @@ $(function() {
     }, 60);
   }
 
-});
-
-
-$('#toggle').click(function() {
-    $(this).toggleClass('active');
-    $('#overlay').toggleClass('open');
 });
