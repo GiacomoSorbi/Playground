@@ -1,6 +1,15 @@
 var MyModule;
 $(function() {
 
+
+    $('#toggle').click(function() {
+        $(this).toggleClass('active');
+        console.log("pressed");
+        $('#overlay').toggleClass('open');
+    });
+
+
+
   //generate random int a<=x<=b
   function randint(a, b) {
     return Math.floor(Math.random() * (b - a + 1) + a);
@@ -367,7 +376,3 @@ $(function() {
 
 });
 
-$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-});

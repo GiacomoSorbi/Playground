@@ -3,9 +3,10 @@ body {
   padding: 0;
   margin: 0;
   background: #fff;
-  color: 373C3F;
+  color: #373C3F;
   font-family: "museo-sans";
-  font-weight: 300; }
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 p {
   line-height: 40px;
@@ -249,24 +250,7 @@ a.register-btn-nav:hover {
         overflow: hidden; }
         .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
           width: 100%; }
-        .overlay ul li a:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          transform: translateX(-50%);
-          height: 3px;
-          background: #FFF;
-          transition: .35s; }
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%; }
-  100% {
-    opacity: 1;
-    left: 0; } }
 /*****************************
  HOME SECTION - CANVAS + INTRO
 ******************************/
@@ -436,7 +420,6 @@ MEDIA QUERY
 /*****************************
  CSS3 ANIMATIONS
 ******************************/
-/* used for home scroll arrow */
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -450,5 +433,12 @@ MEDIA QUERY
     opacity: 0;
     transform: none;
     top: 32px; } }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

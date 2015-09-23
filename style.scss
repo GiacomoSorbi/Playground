@@ -3,9 +3,10 @@ body {
   padding: 0;
   margin: 0;
   background: #fff;
-  color: 373C3F;
+  color: #373C3F;
   font-family: "museo-sans";
   font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 p {
@@ -318,33 +319,12 @@ $button-width: 30px;
          &:active:after {
            width: 100%;
          }
-        
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          transform: translateX(-50%);
-          height: 3px;
-          background: $color-link;
-          transition: .35s;
-        }
       }
     }
   }
 }
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
+
 
 
 /*****************************
@@ -515,8 +495,6 @@ i.fa-chevron-down {
 }
 
 
-
-
 /*****************************
 MEDIA QUERY
 ******************************/
@@ -545,7 +523,7 @@ MEDIA QUERY
 /*****************************
  CSS3 ANIMATIONS
 ******************************/
-/* used for home scroll arrow */
+
 
 @keyframes fadeInDown {
   0% {
@@ -562,5 +540,17 @@ MEDIA QUERY
     opacity: 0;
     transform: none;
     top: 32px
+  }
+}
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
   }
 }
