@@ -1,163 +1,177 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css">
-  <link rel="stylesheet" href="/style.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://use.typekit.net/zbv4fek.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+
+    <script type='text/javascript' src="effects.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 
-  <div class="page" id="top">
+<div class="page" id="top">
 
     <nav id="main-nav">
 
-      <div class="full-wrapper relative">
+        <div class="full-wrapper relative">
 
-        <div id="nav-logo-wrap">
-          <a href="/"><img src="http://imgh.us/veruscript.svg" alt="Veruscript"></a>
+            <div id="nav-logo-wrap">
+                <a href="/"><img src="http://imgh.us/veruscript.svg" alt="Veruscript"></a>
+            </div>
+
+            <div id="nav-menu-wrap">
+                <div id="nav-page-section">
+                    <ul>
+                        <li><a href="#">Journal</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="separator-menu"></div>
+
+                <!-- [end #nav-section] -->
+                <div id="nav-tools-section">
+                    <ul>
+                        <li><a href="#" class="submit-btn-nav">Submit a paper</a></li>
+                        <li><a href="#" class="signin-btn-nav">Sign in</a></li>
+                        <li><a href="#" class="register-btn-nav">Register for free</a></li>
+                    </ul>
+                </div>
+
+                <!-- [end #nav-tools-section] -->
+            </div>
+
+            <!-- humber menu & overlay menu-->
+            <div class="button_container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+
+            <div class="overlay" id="overlay">
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="#">Journal</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Submit a Paper</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="clear"></div>
+
+
         </div>
-
-        <div id="nav-menu-wrap">
-          <div id="nav-page-section">
-            <ul>
-              <li><a href="#">Journal</a></li>
-              <li><a href="#">About</a></li>
-            </ul>
-          </div>
-         <div class="separator-menu"></div>
-
-          <!-- [end #nav-section] -->
-          <div id="nav-tools-section">
-            <ul>
-              <li><a href="#" class="submit-btn-nav">Submit a paper</a></li>
-              <li><a href="#" class="signin-btn-nav">Sign in</a></li>
-              <li><a href="#" class="register-btn-nav">Register for free</a></li>
-            </ul>
-          </div>
-          
-        <!-- [end #nav-tools-section] -->
-        </div>
-        
-          <!-- humber menu & overlay menu-->
-          <div class="button_container" id="toggle">
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
-          </div>
-
-          <div class="overlay" id="overlay">
-            <nav class="overlay-menu">
-              <ul>
-                <li><a href="#">Journal</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Submit a Paper</a></li>
-                <li><a href="#">Log in</a></li>
-                <li><a href="#">Register</a></li>
-              </ul>
-            </nav>
-          </div>
-          
-        
-        <div class="clear"></div>
-
-
-      </div>
 
     </nav>
 
     <div class="home-section">
 
-      <canvas id="canvas"></canvas>
+        <canvas id="canvas"></canvas>
 
-      <div id="wrapper">
+        <div id="wrapper">
 
 
-        <div id="home-content">
-          <div id="home-text">
-            <div id="title">
-              <h2>UNITED IN</h2>
-              <h2>
-              <span style='color: #00acd4'>RESEARCH</span>
-              <span style='display: none; color: #755f93'>EXCELLENCE</span>
-              <span style='display: none; color: #c23e37'>INNOVATION</span>
-              <span style='display: none; color: #c76c17'>SHARING</span>
-              <span style='display: none; color: #34a853'>FAIRNESS</span>
-            </h2>
+            <div id="home-content">
+                <div id="home-text">
+                    <div id="title">
+                        <h2>UNITED IN</h2>
+                        <h2>
+                            <span style='color: #00acd4'>RESEARCH</span>
+                            <span style='display: none; color: #755f93'>EXCELLENCE</span>
+                            <span style='display: none; color: #c23e37'>INNOVATION</span>
+                            <span style='display: none; color: #c76c17'>SHARING</span>
+                            <span style='display: none; color: #34a853'>FAIRNESS</span>
+                        </h2>
 
-              <h3>Together we can make a difference in the world of academia			</h3>
+                        <h3>Together we can make a difference in the world of academia			</h3>
 
+                    </div>
+                    <!-- [end #title] -->
+
+                    <div class="local-scroll">
+                        <a data-scroll href="#about" class="scroll-down">
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <!-- [end #local-scroll] -->
+                </div>
+                <!-- [end #home-text] -->
             </div>
-            <!-- [end #title] -->
-
-            <div class="local-scroll">
-              <a data-scroll href="#about" class="scroll-down">
-                <i class="fa fa-chevron-down"></i>
-              </a>
-            </div>
-            <!-- [end #local-scroll] -->
-          </div>
-          <!-- [end #home-text] -->
+            <!-- [end #home-content] -->
         </div>
-        <!-- [end #home-content] -->
-      </div>
-      <!-- [end #wrapper] -->
+        <!-- [end #wrapper] -->
     </div>
     <!-- [end .home-section] -->
 
 
     <section class="page-section animated bkg-white" id="about">
-      <div class="container">
+        <div class="container">
 
-        <div class="intro-body ">
-          <h2 class="">VERUSCRIPT SUPPORT THE ENTIRE RESEARCH COMMUNITY</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="intro-body ">
+                <h2 class="">VERUSCRIPT SUPPORT THE ENTIRE RESEARCH COMMUNITY</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
         </div>
-
-      </div>
     </section>
     <!-- [end .page-section] -->
 
     <section class="page-section animated bkg-gray" id="about">
-      <div class="container">
+        <div class="container">
 
-        <div class="process-body">
-          <h2>VERUSCRIPT SUPPORT THE ENTIRE RESEARCH COMMUNITY</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="process-body">
+                <h2>VERUSCRIPT SUPPORT THE ENTIRE RESEARCH COMMUNITY</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
         </div>
-
-      </div>
     </section>
     <!-- [end .page-section] -->
 
 
-  </div>
-  <!-- [end page] -->
+</div>
+<!-- [end page] -->
 
 
-  <!-- [Script stiky menu ] -->
-  <script type="text/javascript">
+<!-- [Script stiky menu ] -->
+<script type="text/javascript">
     window.addEventListener("scroll", function(){
-      if(window.pageYOffset > 50){
-        document.getElementById("main-nav").className = "scrolling";
-      } else {
-        document.getElementById("main-nav").className = "";
-      }
+        if(window.pageYOffset > 50){
+            document.getElementById("main-nav").className = "scrolling";
+        } else {
+            document.getElementById("main-nav").className = "";
+        }
     })
-    
-  </script>
 
-  <!-- [scrolling page] -->
-  <script type='text/javascript' src="http://cferdinandi.github.io/smooth-scroll/dist/js/smooth-scroll.js"></script>
-  <script type='text/javascript'>
+</script>
+
+<!-- [scrolling page] -->
+<script type='text/javascript' src="http://cferdinandi.github.io/smooth-scroll/dist/js/smooth-scroll.js"></script>
+<script type='text/javascript'>
     smoothScroll.init({
-      speed: 1500, // Integer. How fast to complete the scroll in milliseconds
-      easing: 'easeInOutCubic' // Easing pattern to use
+        speed: 1500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic' // Easing pattern to use
     });
-  </script>
-  <script type='text/javascript' src="/effects.js"></script>
+</script>
+
+
 
 
 </body>
+</html>
