@@ -1,13 +1,10 @@
 var MyModule;
 $(function() {
-
-
+    
     $('#toggle').click(function() {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
     });
-
-
 
   //generate random int a<=x<=b
   function randint(a, b) {
@@ -33,7 +30,7 @@ $(function() {
     filledCircle: 80,
     concentricCircle: 40,
     //min and max speed to move
-    speedMin: 0.2,
+    speedMin: 0.4,
     speedMax: 2.6,
     //max reachable opacity for every circle and blur effect
     maxOpacity: 0.45,
@@ -374,4 +371,3 @@ $(function() {
   }
 
 });
-
