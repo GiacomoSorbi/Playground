@@ -4,7 +4,6 @@ $(function() {
 
     $('#toggle').click(function() {
         $(this).toggleClass('active');
-        console.log("pressed");
         $('#overlay').toggleClass('open');
     });
 

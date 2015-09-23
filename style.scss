@@ -44,7 +44,7 @@ COMMON ELEMENTS
   display: block;
   background-color: rgba(0, 0, 0, 0);
   color: #FFF;
-  z-index: 999;
+  z-index: 998;
   left:0;
   top:0;
   right:0;
@@ -205,7 +205,7 @@ $button-width: 30px;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
-  z-index: 100;
+  z-index: 9999;
   transition: opacity .25s ease;
   
   &:hover {
@@ -250,6 +250,7 @@ $button-width: 30px;
 }
 
 .overlay {
+  z-index: 999;
   position: fixed;
   background: $color-main;
   top: 0;
