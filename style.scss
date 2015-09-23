@@ -271,6 +271,8 @@ $button-width: 30px;
       display: block;
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s;
+      text-transform: uppercase;
+
       
       &:nth-of-type(2) {
         animation-delay: .4s;
@@ -315,10 +317,9 @@ $button-width: 30px;
         text-decoration: none;
         overflow: hidden;
         
-        &:hover:after,
-         &:focus:after,
-         &:active:after {
-           width: 100%;
+        &:hover{
+          width: 100%;
+          color:#00ACD4;
          }
       }
     }
