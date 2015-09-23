@@ -305,7 +305,6 @@ $button-width: 30px;
     li {
       display: block;
       height: 25%;
-      height: calc(100% / 4);
       min-height: 50px;
       position: relative;
       opacity: 0;
@@ -326,8 +325,24 @@ $button-width: 30px;
   }
 }
 
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  list-style-type: none;
+}
 
-
+li .list-number {
+  background-color: #00acd4;
+  color: white;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
 
 /*****************************
  HOME SECTION - CANVAS + INTRO
@@ -392,7 +407,9 @@ $button-width: 30px;
   font-weight: 300;
   margin-top: 30px;
 }
-/*** SCROLL HOMEPAGE ***/
+/*****************************
+SCROLL HOMEPAGE
+******************************/
 
 .local-scroll {
   width: 120px;
@@ -441,7 +458,9 @@ i.fa-chevron-down {
   left: 50%;
   margin-left: -10.5px
 }
-/*** CANVAS HOMEPAGE ***/
+/*****************************
+CANVAS HOMEPAGE
+******************************/
 
 #canvas {
   position: relative;
