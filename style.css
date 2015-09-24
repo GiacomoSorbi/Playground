@@ -1,31 +1,112 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  background: #fff;
-  color: #373C3F;
-  font-family: "museo-sans";
-  font-weight: 300;
-  -webkit-font-smoothing: subpixel-antialiased; }
-
-p {
-  line-height: 40px;
-  font-size: 16px; }
-
 /*****************************
-COMMON ELEMENTS
+ HOME SECTION - CANVAS + INTRO
 ******************************/
-.page {
+.home-section {
+  position: relative;
+  width: 100%;
+  background: #262b2e;
   overflow: hidden; }
 
-.full-wrapper {
-  margin: 0 5%; }
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 25;
+  height: 100%;
+  text-align: center; }
 
-.relative {
-  postion: relative; }
+#home-content {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
 
-.clear {
-  clear: both; }
+#home-text {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle; }
+
+#title {
+  position: relative;
+  min-height: 220px; }
+
+#title h2 {
+  color: #fff;
+  font-size: 65px;
+  font-family: "museo-slab";
+  font-weight: 600;
+  line-height: 50px; }
+
+#title h2 > span {
+  -webkit-transition: opacity linear 1.5s;
+  -moz-transition: opacity linear 1.5s;
+  -ms-transition: opacity linear 1.5s;
+  -o-transition: opacity linear 1.5s;
+  transition: opacity linear 1.5s; }
+
+#title h3 {
+  color: #fff;
+  font-size: 22px;
+  font-family: "museo-sans";
+  font-weight: 300;
+  margin-top: 30px; }
+
+/*****************************
+CANVAS HOMEPAGE
+******************************/
+#canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+/*****************************
+SCROLL HOMEPAGE
+******************************/
+.local-scroll {
+  width: 120px;
+  height: 50px;
+  margin-left: -60px;
+  bottom: 30px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  text-align: center;
+  text-decoration: none; }
+
+.scroll-down:before {
+  display: block;
+  content: "";
+  width: 32px;
+  height: 32px;
+  border: 3px solid #FFF;
+  background: transparent !important;
+  margin: 0 0 0 -20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #fff;
+  border-radius: 24px;
+  z-index: 1; }
+
+i {
+  display: inline-block;
+  font-style: normal;
+  position: relative; }
+
+i.fa-chevron-down {
+  color: #fff;
+  display: block;
+  top: 26px;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  animation: fadeInDown 1.2s linear infinite;
+  position: absolute;
+  left: 50%;
+  margin-left: -11.5px; }
 
 /*****************************
  MAIN MENU - STICKY MENU
@@ -296,115 +377,34 @@ li .list-number {
   left: 0;
   top: 20px; }
 
-/*****************************
- HOME SECTION - CANVAS + INTRO
-******************************/
-.home-section {
-  position: relative;
-  width: 100%;
-  background: #262b2e;
-  overflow: hidden; }
-
-#wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 25;
-  height: 100%;
-  text-align: center; }
-
-#home-content {
-  position: relative;
-  display: table;
-  width: 100%;
-  height: 100%;
-  text-align: center; }
-
-#home-text {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle; }
-
-#title {
-  position: relative;
-  min-height: 220px; }
-
-#title h2 {
-  color: #fff;
-  font-size: 65px;
-  font-family: "museo-slab";
-  font-weight: 600;
-  line-height: 50px; }
-
-#title h2 > span {
-  -webkit-transition: opacity linear 1.5s;
-  -moz-transition: opacity linear 1.5s;
-  -ms-transition: opacity linear 1.5s;
-  -o-transition: opacity linear 1.5s;
-  transition: opacity linear 1.5s; }
-
-#title h3 {
-  color: #fff;
-  font-size: 22px;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  color: #373C3F;
   font-family: "museo-sans";
   font-weight: 300;
-  margin-top: 30px; }
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+p {
+  line-height: 40px;
+  font-size: 16px; }
 
 /*****************************
-SCROLL HOMEPAGE
+COMMON ELEMENTS
 ******************************/
-.local-scroll {
-  width: 120px;
-  height: 50px;
-  margin-left: -60px;
-  bottom: 30px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  text-align: center;
-  text-decoration: none; }
+.page {
+  overflow: hidden; }
 
-.scroll-down:before {
-  display: block;
-  content: "";
-  width: 32px;
-  height: 32px;
-  border: 3px solid #FFF;
-  background: transparent !important;
-  margin: 0 0 0 -20px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  background: #fff;
-  border-radius: 24px;
-  z-index: 1; }
+.full-wrapper {
+  margin: 0 5%; }
 
-i {
-  display: inline-block;
-  font-style: normal;
-  position: relative; }
+.relative {
+  postion: relative; }
 
-i.fa-chevron-down {
-  color: #fff;
-  display: block;
-  top: 26px;
-  width: 12px;
-  height: 12px;
-  border-radius: 4px;
-  animation: fadeInDown 1.2s linear infinite;
-  position: absolute;
-  left: 50%;
-  margin-left: -11.5px; }
-
-/*****************************
-CANVAS HOMEPAGE
-******************************/
-#canvas {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1; }
+.clear {
+  clear: both; }
 
 /*****************************
  PAGE ELEMENTS
