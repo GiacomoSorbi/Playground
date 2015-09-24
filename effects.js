@@ -1,6 +1,13 @@
 var MyModule;
 $(function() {
-    
+
+    //input-field focus event listener
+    $('#subscribe').onactivate=function(){
+        document.getElementById("subscribe").style.backgroundColor = "red";
+        console.log("pippi");
+    };
+
+    //overlay menu event listener
     $('#toggle').click(function() {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
