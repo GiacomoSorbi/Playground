@@ -548,6 +548,10 @@ form {
   font-size: 0px;
   display: inline-block; }
 
+textarea {
+  display: block;
+  margin: auto; }
+
 html,
 body {
   padding: 0;
