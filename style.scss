@@ -2,6 +2,7 @@
 @import "css/scroll";
 @import "css/sticky";
 @import "css/responsive-menu";
+@import "css/input-yoshiko";
 
 html,
 body {
@@ -11,11 +12,10 @@ body {
   color: #373C3F;
   font-family: "museo-sans";
   font-weight: 300;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 p {
-  line-height: 40px;
+  line-height: 35px;
   font-size: 16px;
 }
 
@@ -32,16 +32,12 @@ COMMON ELEMENTS
 }
 
 .relative {
-  postion: relative
+  position: relative
 }
-
 
 .clear {
   clear: both
 }
-
-
-
 
 /*****************************
  PAGE ELEMENTS
@@ -75,12 +71,12 @@ COMMON ELEMENTS
   position: relative;
 }
 
-.container h2 {
+.container h2.linebottom {
   margin-bottom: 80px;
   position: relative;
 }
 
-.container h2:after {
+.container h2.linebottom:after {
   content: "";
   position: absolute;
   height: 1px;
@@ -91,20 +87,22 @@ COMMON ELEMENTS
   margin-left: 15px;
 }
 
-.intro-body, .process-body {
+.intro-body, .process-body, .joinus-body {
   text-align: center;
+
+  p {
+    margin-bottom: 40px
+  }
+
 }
 
-/*  DIAGRAM --- fix vertical align */
+.diagram {
+  display: flex;
+  height: 100%;
+}
 
 .legend {
-  display: table;
-}
-
-.legend ul {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
+  margin: auto 0;
 }
 
 ul li[id^="diagram-legend-"] {
@@ -114,12 +112,13 @@ ul li[id^="diagram-legend-"] {
   line-height: 20px;
   font-size: 13px;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 span.list-number {
   background-color: #00acd4;
   color: white;
+  font-weight: 500;
   height: 35px;
   width: 35px;
   line-height: 35px;
@@ -127,7 +126,89 @@ span.list-number {
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 5px;
+}
+
+.join-us {
+  background: url("images/joinus-home.png") no-repeat bottom center;
+}
+
+/*****************************
+FOOTER
+******************************/
+
+footer {
+
+  border-top: 1px solid #7c7c7c;
+  padding-top: 45px;
+
+  img {
+    width: 90px
+  }
+
+  a {
+    color: #373C3F;
+  }
+  a:hover {
+    color: #00ACD4;
+    text-decoration: none
+  }
+
+  .more-information {
+    font-weight: 500;
+    margin-top: 10px
+  }
+
+  figure {
+    margin-bottom: 20px
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #7c7c7c;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding: 0;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+  }
+}
+
+.mini-about, .contact-information {
+  p {
+    font-size: 13px;
+    line-height: 23px;
+    margin: 2px 0 0;
+  }
+
+}
+
+.footer-close {
+  background-color: #373c3f;
+  text-align: center;
+  padding: 10px 0;
+  margin: 60px 0 0;
+
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    line-height: 30px;
+    margin: 0;
+  }
 }
 
 
