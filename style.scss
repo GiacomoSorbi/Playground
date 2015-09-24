@@ -2,6 +2,7 @@
 @import "css/scroll";
 @import "css/sticky";
 @import "css/responsive-menu";
+@import "css/input-yoshiko";
 
 html,
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 p {
-  line-height: 40px;
+  line-height: 35px;
   font-size: 16px;
 }
 
@@ -35,13 +36,9 @@ COMMON ELEMENTS
   postion: relative
 }
 
-
 .clear {
   clear: both
 }
-
-
-
 
 /*****************************
  PAGE ELEMENTS
@@ -75,12 +72,14 @@ COMMON ELEMENTS
   position: relative;
 }
 
-.container h2 {
+
+
+.container h2.linebottom {
   margin-bottom: 80px;
   position: relative;
 }
 
-.container h2:after {
+.container h2.linebottom:after {
   content: "";
   position: absolute;
   height: 1px;
@@ -91,20 +90,20 @@ COMMON ELEMENTS
   margin-left: 15px;
 }
 
-.intro-body, .process-body {
+.intro-body, .process-body, .joinus-body {
   text-align: center;
+
+  p {margin-bottom: 40px}
+
 }
 
-/*  DIAGRAM --- fix vertical align */
+.diagram {
+  display: flex;
+  height: 100%;
+}
 
 .legend {
-  display: table;
-}
-
-.legend ul {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
+  margin: auto 0;
 }
 
 ul li[id^="diagram-legend-"] {
@@ -114,7 +113,7 @@ ul li[id^="diagram-legend-"] {
   line-height: 20px;
   font-size: 13px;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 span.list-number {
@@ -127,7 +126,8 @@ span.list-number {
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 5px;
 }
 
+.join-us {background:url("images/joinus-home.png") no-repeat bottom center;}
 
