@@ -108,6 +108,20 @@ i.fa-chevron-down {
   left: 50%;
   margin-left: -11.5px; }
 
+/* animation local scroll */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    top: 30px; }
+  50% {
+    opacity: 1;
+    transform: none;
+    top: 31px; }
+  100% {
+    opacity: 0;
+    transform: none;
+    top: 32px; } }
 /*****************************
  MAIN MENU - STICKY MENU
 ******************************/
@@ -360,23 +374,33 @@ a.register-btn-nav:hover {
       .overlay ul li a.short {
         width: auto; }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-  list-style-type: none; }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+/*****************************
+MEDIA QUERY RESPONSIVE RESPONSIVE
+******************************/
+@media only screen and (min-width: 1200px) {
+  .button_container, #overlay, .button-user {
+    display: none; }
 
-li .list-number {
-  background-color: #00acd4;
-  color: white;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 20px; }
+  #nav-tools-section, #nav-page-section {
+    display: inline; } }
+@media only screen and (max-width: 1200px) {
+  .button_container {
+    display: block; }
 
+  .button-user {
+    display: inline-block;
+    margin-right: 10px; }
+
+  #nav-tools-section, #nav-page-section, .separator-menu {
+    display: none; } }
+/* TODO: hide login login/registration below query tablet and mobile  */
 html,
 body {
   padding: 0;
@@ -450,47 +474,34 @@ COMMON ELEMENTS
 .intro-body, .process-body {
   text-align: center; }
 
-/*****************************
-MEDIA QUERY
-******************************/
-@media only screen and (min-width: 1280px) {
-  .button_container, #overlay, .button-user {
-    display: none; }
+/*  DIAGRAM --- fix vertical align */
+.legend {
+  display: table; }
 
-  #nav-tools-section, #nav-page-section {
-    display: inline; } }
-@media only screen and (max-width: 1280px) {
-  .button_container {
-    display: block; }
+.legend ul {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle; }
 
-  .button-user {
-    display: inline-block;
-    margin-right: 10px; }
+ul li[id^="diagram-legend-"] {
+  position: relative;
+  list-style: none;
+  padding-left: 50px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 30px; }
 
-  #nav-tools-section, #nav-page-section, .separator-menu {
-    display: none; } }
-/*****************************
- CSS3 ANIMATIONS
-******************************/
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-    top: 30px; }
-  50% {
-    opacity: 1;
-    transform: none;
-    top: 31px; }
-  100% {
-    opacity: 0;
-    transform: none;
-    top: 32px; } }
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%; }
-  100% {
-    opacity: 1;
-    left: 0; } }
+span.list-number {
+  background-color: #00acd4;
+  color: white;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

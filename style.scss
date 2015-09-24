@@ -1,6 +1,7 @@
-@import "header";
-@import "scroll";
-@import "sticky";
+@import "css/header";
+@import "css/scroll";
+@import "css/sticky";
+@import "css/responsive-menu";
 
 html,
 body {
@@ -18,7 +19,6 @@ p {
   font-size: 16px;
 }
 
-
 /*****************************
 COMMON ELEMENTS
 ******************************/
@@ -35,7 +35,13 @@ COMMON ELEMENTS
   postion: relative
 }
 
-.clear {clear:both}
+
+.clear {
+  clear: both
+}
+
+
+
 
 /*****************************
  PAGE ELEMENTS
@@ -47,17 +53,21 @@ COMMON ELEMENTS
   display: block;
   position: relative;
   box-sizing: border-box;
-  padding:80px 0; 
+  padding: 80px 0;
 }
 
-.bkg-white {background-color:#fff}
-.bkg-gray {background-color:#f9f9f9}
+.bkg-white {
+  background-color: #fff
+}
 
+.bkg-gray {
+  background-color: #f9f9f9
+}
 
 .container {
   /*temp: @media (min-width: 1200px) */
   width: 1170px;
-  /**/  
+  /**/
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -65,82 +75,59 @@ COMMON ELEMENTS
   position: relative;
 }
 
-.container h2{
-    margin-bottom:80px; position: relative;
+.container h2 {
+  margin-bottom: 80px;
+  position: relative;
 }
 
-.container h2:after{ 
-    content: "";
-    position: absolute;
-    height: 1px;
-    border-bottom: 1px solid #00ACD4;
-    top: 80px;
-    width: 80px;
-    left: 45%;
-    margin-left: 15px;
+.container h2:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: 1px solid #00ACD4;
+  top: 80px;
+  width: 80px;
+  left: 45%;
+  margin-left: 15px;
 }
 
 .intro-body, .process-body {
-  text-align:center;
+  text-align: center;
+}
+
+/*  DIAGRAM --- fix vertical align */
+
+.legend {
+  display: table;
+}
+
+.legend ul {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+ul li[id^="diagram-legend-"] {
+  position: relative;
+  list-style: none;
+  padding-left: 50px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+span.list-number {
+  background-color: #00acd4;
+  color: white;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10px;
 }
 
 
-/*****************************
-MEDIA QUERY
-******************************/
-
-
-@media only screen and (min-width: 1280px) {
-  .button_container, #overlay, .button-user {
-    display: none;
-  }
-  #nav-tools-section, #nav-page-section{
-    display:inline;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .button_container {display: block;}
-  .button-user {display: inline-block; margin-right: 10px;}
-
-  #nav-tools-section, #nav-page-section, .separator-menu{
-    display:none;
-  }
-}
-
-
-
-/*****************************
- CSS3 ANIMATIONS
-******************************/
-
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-    top: 30px
-  }
-  50% {
-    opacity: 1;
-    transform: none;
-    top: 31px
-  }
-  100% {
-    opacity: 0;
-    transform: none;
-    top: 32px
-  }
-}
-
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
