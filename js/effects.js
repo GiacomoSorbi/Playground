@@ -1,18 +1,12 @@
 var MyModule;
 $(function() {
 
-    //input-field focus event listener
-    document.getElementById("subscribe").onfocus=function(){
-        document.getElementById("subscribe").parentNode.classList.add('input--filled');
-    };
-    document.getElementById("subscribe").onblur=function(){
-        document.getElementById("subscribe").parentNode.classList.remove('input--filled');
-    };
-
-    //overlay menu event listener
-    $('#toggle').click(function() {
-        $(this).toggleClass('active');
-        $('#overlay').toggleClass('open');
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 50) {
+            document.getElementById("main-nav").className = "scrolling";
+        } else {
+            document.getElementById("main-nav").className = "";
+        }
     });
 
   //generate random int a<=x<=b
@@ -378,5 +372,10 @@ $(function() {
       return true;
     }, 60);
   }
+    /*Credits and acknowledgements:
+     Original Idea and Design by Luca Luzzatti
+
+     Optimizing tips from Benjamin Kästner
+     General tips from Salvatore Previti*/
 
 });
