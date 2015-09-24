@@ -402,18 +402,23 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
     display: none; } }
 /* TODO: hide login login/registration below query tablet and mobile  */
 /* mailing list */
+form {
+  display: flex;
+  border-radius: 3px 0 0 3px; }
+
 .input {
   position: relative;
   z-index: 1;
-  display: inline-block;
+  flex: 1;
   margin: 1em;
   max-width: 350px;
   width: calc(100% - 2em);
-  vertical-align: top; }
+  vertical-align: top;
+  margin: 0 auto; }
 
 .input__field {
   position: relative;
-  display: block;
+  display: inline;
   float: right;
   padding: 0.8em;
   width: 60%;
@@ -428,7 +433,7 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
   outline: none; }
 
 .input__label {
-  display: inline-block;
+  display: inline;
   float: right;
   padding: 0 1em;
   width: 40%;
@@ -509,6 +514,11 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
 .input--filled .input__field--yoshiko {
   background-color: transparent;
   border-color: #a3d39c; }
+
+#subscribe-submit {
+  background-color: transparent;
+  font-size: 0px;
+  display: inline-block; }
 
 html,
 body {
