@@ -48,3 +48,23 @@ i.fa-chevron-down {
   left: 50%;
   margin-left: -11.5px
 }
+
+
+/* animation local scroll */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    top: 30px;
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+    top: 31px
+  }
+  100% {
+    opacity: 0;
+    transform: none;
+    top: 32px
+  }
+}

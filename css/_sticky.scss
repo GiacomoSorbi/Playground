@@ -320,21 +320,17 @@ $button-width: 30px;
   }
 }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-  list-style-type: none;
-}
 
-li .list-number {
-  background-color: #00acd4;
-  color: white;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 20px;
+
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
