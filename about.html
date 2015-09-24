@@ -17,11 +17,11 @@
     <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script type='text/javascript' src="js/prefixfree.min.js"></script>
 
-    <script type='text/javascript' src="effects.js"></script>
+    <script type='text/javascript' src="js/functions.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -31,76 +31,90 @@
 
 <div class="page" id="top">
 
-    <nav id="main-nav">
+    <div id="page-header">
+        <nav id="main-nav" class="scrolling">
 
-        <div class="full-wrapper relative">
 
-            <div id="nav-logo-wrap">
-                <a href="index.html"><img src="images/logo-veruscript-white.svg" alt="Veruscript"></a>
-            </div>
+            <div class="full-wrapper relative">
 
-            <div id="nav-menu-wrap">
-                <div id="nav-page-section">
-                    <ul>
-                        <li><a href="#">Journal</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-                <div class="separator-menu"></div>
-
-                <!-- [end #nav-section] -->
-                <div id="nav-tools-section">
-                    <ul>
-                        <li><a href="#" class="submit-btn-nav">Submit a paper</a></li>
-                        <li><a href="#" class="signin-btn-nav">Sign in</a></li>
-                        <li><a href="#" class="register-btn-nav">Register for free</a></li>
-                    </ul>
+                <div id="nav-logo-wrap">
+                    <a href="index.html"><img src="images/logo-veruscript-white.svg" alt="Veruscript"></a>
                 </div>
 
-                <!-- [end #nav-tools-section] -->
+                <div id="nav-menu-wrap">
+                    <div id="nav-page-section">
+                        <ul>
+                            <li><a href="#">Journal</a></li>
+                            <li class="active"><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="separator-menu"></div>
+
+                    <!-- [end #nav-section] -->
+                    <div id="nav-tools-section">
+                        <ul>
+                            <li><a href="#" class="submit-btn-nav">Submit a paper</a></li>
+                            <li><a href="#" class="signin-btn-nav">Sign in</a></li>
+                            <li><a href="#" class="register-btn-nav">Register for free</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- [end #nav-tools-section] -->
+                </div>
+
+
+                <a href="#">
+                    <div class="button-user"><i class="ion-person"></i></div>
+                </a>
+
+
+                <!-- humber menu & overlay menu-->
+                <div class="button_container" id="toggle">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+
+
+                <div class="overlay" id="overlay">
+                    <nav class="overlay-menu">
+                        <ul>
+                            <li><a href="#">Journal</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">Submit a Paper</a></li>
+                            <li>
+                                <a class="short" href="#">Sign in</a>
+                                <span style="font-size: 27px; font-weight: 100">/</span>
+                                <a class="short" href="#">Register</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="clear"></div>
+
             </div>
 
+        </nav>
 
-            <a href="#"><div class="button-user"><i class="ion-person"></i></div></a>
+        <div class="container">
 
-
-            <!-- humber menu & overlay menu-->
-            <div class="button_container" id="toggle">
-                <span class="top"></span>
-                <span class="middle"></span>
-                <span class="bottom"></span>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>About Us</h1>
+                </div>
             </div>
-
-
-            <div class="overlay" id="overlay">
-                <nav class="overlay-menu">
-                    <ul>
-                        <li><a href="#">Journal</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Submit a Paper</a></li>
-                        <li><a class="short" href="#">Sign in</a> <span style="font-size: 27px; font-weight: 100">/</span> <a class="short" href="#">Register</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div class="clear"></div>
-
         </div>
 
-    </nav>
-
-    <div class="home-section">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate enim illum aperiam ab</p>
+        <div class="hero"></div>
     </div>
-    <!-- [end .home-section] -->
 
 
     <section class="page-section animated bkg-white" id="about">
         <div class="container">
 
             <div class="intro-body ">
-                <h2 class="">VERUSCRIPT SUPPORT THE ENTIRE RESEARCH COMMUNITY</h2>
+                <h2 class="linebottom">VERUSCRIPT SUPPORT THE ENTIRE RESEARCH COMMUNITY</h2>
 
                 <p>Veruscript, in our view, makes publishing cost efficient and high quality. It leaves authors in
                     control of their paper.It shares revenues with the academic community which produced the content.
@@ -112,69 +126,70 @@
     </section>
     <!-- [end .page-section] -->
 
-    <section class="page-section animated bkg-gray" id="publish">
+    <!-- Footer -->
+    <footer class="bkg-gray footer">
         <div class="container">
 
-            <div class="process-body">
-                <h2>THE VERUSCRIPT PUBLISHING PROCESS</h2>
-                <div class="col-md-9" style="display: inline-block"><img src="images/diagram/diagram.svg" alt="">
-                    <div class="col-md-3" style="float: right;">
-                        <ul>
-                            <li id="diagram-legend-1">
-                                <span class="list-number">1</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate enim illum aperiam ab</p>
-                            </li>
-                            <li id="diagram-legend-2">
-                                <span class="list-number">2</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sunt esse iste, sequi </p>
-                            </li>
-                            <li id="diagram-legend-3">
-                                <span class="list-number">3</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum id vel ipsa sequi in obcaecati </p>
-                            </li>
-                            <li id="diagram-legend-4">
-                                <span class="list-number">4</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis nulla tempore suscipit ratione</p>
-                            </li>
-                            <li id="diagram-legend-5">
-                                <span class="list-number">5</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ipsa est a ea mollitia</p>
-                            </li>
-                        </ul>
-                    </div></div>
+            <div class="row">
+
+                <div class="col-md-3 mini-about">
+
+                    <figure id="logo-footer">
+                        <img src="images/logo-veruscript-black.svg" alt="Veruscript logo">
+                    </figure>
+
+                    <p>Eiusmod labore velit duis culpa mollit nostrud eiusmod dolor. Id ullamco nostrud esse id ullamco
+                        sunt. Id laboris ea quis cillum ex<br/>
+                        <a class="more-information">Read more...</a>
+                    </p>
+                </div>
+
+                <div class="col-md-1"></div>
+
+                <div class="col-md-2 footer-menu">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 footer-menu">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Privacy &amp; Legal</a></li>
+                        <li><a href="#">Term &amp; conditions</a></li>
+                        <li><a href="#">Site map</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-1"></div>
+
+                <div class="col-md-3 contact-information">
+                    <h4>Contact us</h4>
+
+                    <p>124-128 Barbly Road, Pall Mall Deposit 41<br/>
+                        W106BL, London, UK<br/>
+                        <i class="fa fa-phone"></i> +44 (0)20 7183 1173 <br/>
+                        <i class="fa fa-envelope"></i> <a href="mailto:info@veruscript.com">info@veruscript.com</a>
+                    </p>
+                </div>
+
             </div>
 
-        </div>
-    </section>
-    <!-- [end .page-section] -->
-
-    <section class="page-section animated bkg-white" id="works">
-        <div class="container">
-
-            <div class="intro-body ">
-                <h2 class="">HOW VERUSCRIPT WORKS?</h2>
-                <p>Veruscript, in our view, makes publishing cost efficient and high quality. It leaves authors in control of their paper.It shares revenues with the academic community which produced the content. It opens its costs and editorial processes toscrutiny. It encourages maximum dissemination of the content, and of course upholds the highest editorial standards</p>
-            </div>
 
         </div>
-    </section>
-    <!-- [end .page-section] -->
+        <div class="footer-close">
+            <p>© VERUSCRIPT 2015 - AGC Partners LTD.</p>
+        </div>
+
+    </footer>
+
 
 </div>
 <!-- [end page] -->
 
-
-<!-- [Script sticky menu ] -->
-<script type="text/javascript">
-    window.addEventListener("scroll", function () {
-        if (window.pageYOffset > 50) {
-            document.getElementById("main-nav").className = "scrolling";
-        } else {
-            document.getElementById("main-nav").className = "";
-        }
-    })
-
-</script>
 
 <!-- [scrolling page] -->
 <script type='text/javascript' src="http://cferdinandi.github.io/smooth-scroll/dist/js/smooth-scroll.js"></script>
