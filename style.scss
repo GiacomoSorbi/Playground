@@ -1,3 +1,7 @@
+@import "header";
+@import "scroll";
+@import "sticky";
+
 html,
 body {
   padding: 0;
@@ -30,6 +34,7 @@ COMMON ELEMENTS
   postion: relative
 }
 
+<<<<<<< HEAD
 .clear {
   clear: both
 }
@@ -486,6 +491,9 @@ CANVAS HOMEPAGE
   height: 100%;
   z-index: 1;
 }
+=======
+.clear {clear:both}
+>>>>>>> 0f973548cd0c85f5ed04735dbc3ef1ee68bbaba8
 
 /*****************************
  PAGE ELEMENTS
