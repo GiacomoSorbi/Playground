@@ -2,9 +2,11 @@ var MyModule;
 $(function() {
 
     //input-field focus event listener
-    $('#subscribe').onactivate=function(){
-        document.getElementById("subscribe").style.backgroundColor = "red";
-        console.log("pippi");
+    document.getElementById("subscribe").onfocus=function(){
+        document.getElementById("subscribe").parentNode.classList.add('input--filled');
+    };
+    document.getElementById("subscribe").onblur=function(){
+        document.getElementById("subscribe").parentNode.classList.remove('input--filled');
     };
 
     //overlay menu event listener

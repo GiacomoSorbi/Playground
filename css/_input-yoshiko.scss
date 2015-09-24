@@ -17,10 +17,8 @@
   width: 60%;
   border: none;
   border-radius: 0;
-  background: #f0f0f0;
+  background: rgba(0,172,212,0.8);
   color: #aaa;
-  font-weight: 400;
-  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
@@ -56,7 +54,7 @@
 /* Yoshiko */
 .input__field--yoshiko {
   width: 100%;
-  background-color: #d0d1d0;
+  background-color: #00ACD4;
   border: 2px solid transparent;
   -webkit-transition: background-color 0.25s, border-color 0.25s;
   transition: background-color 0.25s, border-color 0.25s;
