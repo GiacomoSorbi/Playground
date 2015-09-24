@@ -597,7 +597,8 @@ COMMON ELEMENTS
 
 .container h2.linebottom {
   margin-bottom: 80px;
-  position: relative; }
+  position: relative;
+  text-transform: uppercase; }
 
 .container h2.linebottom:after {
   content: "";
