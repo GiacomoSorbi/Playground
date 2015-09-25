@@ -136,10 +136,10 @@
             <div class="row" id="contact-us">
                 <div id="input-contact" class="col-md-10 col-md-offset-1">
 
-                    <form id="contact_us" class="input input-contact input--yoshiko" role="form" action="https://veruscript.com/api/mailer" method="post">
+                    <form id="contact_us" class="input input-contact input--yoshiko" role="form">
 
                         <div class="col-md-3 single-input-contact">
-                            <input class="input__field input__field--yoshiko" type="text" id="firstName">
+                            <input class="input__field input__field--yoshiko" type="text" name="firstName" id="firstName">
                             <label class="input__label input__label--yoshiko" for="firstName">
                                 <span class="input__label-content input__label-content--yoshiko" data-content="Your Name">Your Name</span>
                             </label>
@@ -150,7 +150,7 @@
                         </div>
 
                         <div class="col-md-3 single-input-contact">
-                            <input class="input__field input__field--yoshiko" type="text" id="lastName">
+                            <input class="input__field input__field--yoshiko" type="text" name="lastName" id="lastName">
                             <label class="input__label input__label--yoshiko" for="lastName">
                                 <span class="input__label-content input__label-content--yoshiko" data-content="Your Last Name">Your Last Name</span>
                             </label>
@@ -162,7 +162,7 @@
 
 
                         <div class="col-md-3 single-input-contact">
-                            <input class="input__field input__field--yoshiko" type="text" id="email">
+                            <input class="input__field input__field--yoshiko" type="text" name="email" id="email">
                             <label class="input__label input__label--yoshiko" for="email">
                                 <span class="input__label-content input__label-content--yoshiko" data-content="Your email">Your email</span>
                             </label>
@@ -174,7 +174,7 @@
 
                         <div class="clear"></div>
 
-                        <textarea class="input__field input__field--yoshiko" rows="5" cols="60" placeholder="Write your message" id="message"></textarea>
+                        <textarea class="input__field input__field--yoshiko" rows="5" cols="60" placeholder="Write your message" name="message" id="message"></textarea>
 
                         <div id="messagemessage" style="visibility: hidden">
                             <i class="fa fa-check-circle"></i> Please, provide a valid message
