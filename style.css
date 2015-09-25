@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*****************************
  HOME SECTION - CANVAS + INTRO
 ******************************/
@@ -431,9 +432,11 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
 /* TODO: hide login login/registration below query tablet and mobile  */
 /* mailing list */
 #form-mailing {
-  margin: 0 auto;
+  margin: 0 auto 50px;
   text-align: center;
   /* Yoshiko */ }
+  #form-mailing #input-mailing {
+    margin-left: 320px; }
   #form-mailing form {
     float: left; }
   #form-mailing button.btn-holding {
@@ -448,8 +451,28 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
     color: #FFF;
     font-weight: 500;
     border: none; }
+  #form-mailing button.btn-holding:focus {
+    outline: none;
+    border: none; }
   #form-mailing button.btn-holding:hover i {
     animation: slideOutRight .4s 0s linear, slideInLeft .4s .2s linear; }
+  #form-mailing .result {
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    width: 440px; }
+  #form-mailing #error {
+    border: 1px solid #AE0505;
+    padding: 10px 0;
+    color: #AE0505;
+    background: rgba(255, 255, 255, 0.9); }
+  #form-mailing #confirm {
+    border: 1px solid;
+    padding: 10px 0;
+    color: #25AE05;
+    background: rgba(255, 255, 255, 0.9); }
   #form-mailing .ion-arrow-right-c:after {
     padding-left: 90px; }
   #form-mailing .ion-arrow-right-c:before {
@@ -552,6 +575,14 @@ p {
   line-height: 35px;
   font-size: 16px; }
 
+h3 {
+  font-size: 22px;
+  color: #373C3F; }
+
+h4 {
+  font-size: 18px;
+  color: #7c7c7c; }
+
 /*****************************
 COMMON ELEMENTS
 ******************************/
@@ -611,8 +642,20 @@ COMMON ELEMENTS
 
 .intro-body, .process-body, .joinus-body {
   text-align: center; }
+  .intro-body h3, .process-body h3, .joinus-body h3 {
+    font-size: 20px;
+    color: #373C3F;
+    font-weight: 300;
+    margin-bottom: 50px; }
   .intro-body p, .process-body p, .joinus-body p {
     margin-bottom: 40px; }
+  .intro-body ul li, .process-body ul li, .joinus-body ul li {
+    list-style: none;
+    padding-right: 10px; }
+  .intro-body li:before, .process-body li:before, .joinus-body li:before {
+    content: "• ";
+    color: #00ACD4;
+    padding-right: 10px; }
 
 .diagram {
   display: flex;
@@ -645,6 +688,41 @@ span.list-number {
 
 .join-us {
   background: url("images/joinus-home.png") no-repeat bottom center; }
+
+/*****************************
+FOOTER PAGEs
+******************************/
+.text-body-footerPage {
+  text-align: left; }
+  .text-body-footerPage h3 {
+    margin: 50px 0 10px; }
+  .text-body-footerPage h4 {
+    margin: 25px 0 15px; }
+  .text-body-footerPage p {
+    margin-bottom: 20px;
+    line-height: 28px;
+    font-size: 14px; }
+  .text-body-footerPage ul {
+    padding-left: 0; }
+  .text-body-footerPage ul li {
+    line-height: 28px;
+    font-size: 14px;
+    list-style: none;
+    padding-right: 5px;
+    margin-bottom: 10px; }
+    .text-body-footerPage ul li ul {
+      margin-left: 10px; }
+    .text-body-footerPage ul li ul li {
+      padding-left: 5px;
+      list-style: none; }
+    .text-body-footerPage ul li li:before {
+      content: "• ";
+      color: #373C3F;
+      padding-right: 3px; }
+  .text-body-footerPage li:before {
+    content: "• ";
+    color: #00ACD4;
+    padding-right: 3px; }
 
 /*****************************
 FOOTER

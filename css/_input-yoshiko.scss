@@ -2,11 +2,16 @@
 
 #form-mailing {
 
+  margin: 0 auto 50px;
+  text-align: center;
 
-    margin: 0 auto;
-    text-align: center;
+  #input-mailing {
+    margin-left: 320px;
+  }
 
-  form {float: left}
+  form {
+    float: left;
+  }
   button.btn-holding {
     float: left;
   }
@@ -20,13 +25,47 @@
     padding: 5px 35px;
     color: #FFF;
     font-weight: 500;
-    border:none;
+    border: none;
   }
 
-  button.btn-holding:hover i {animation: slideOutRight .4s 0s linear, slideInLeft .4s .2s linear; }
+  button.btn-holding:focus {
+    outline: none;
+    border: none;
+  }
 
-  .ion-arrow-right-c:after { padding-left: 90px;}
-  .ion-arrow-right-c:before {padding-right: 90px;}
+  button.btn-holding:hover i {
+    animation: slideOutRight .4s 0s linear, slideInLeft .4s .2s linear;
+  }
+
+  .result {
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    width: 440px;
+  }
+
+  #error {
+    border: 1px solid #AE0505;
+    padding: 10px 0;
+    color: #AE0505;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  #confirm {
+    border: 1px solid ;
+    padding: 10px 0;
+    color: #25AE05;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .ion-arrow-right-c:after {
+    padding-left: 90px;
+  }
+  .ion-arrow-right-c:before {
+    padding-right: 90px;
+  }
 
   .input {
     position: relative;
@@ -71,7 +110,6 @@
     padding: 1.6em 0;
     width: 100%;
   }
-
 
   /* Yoshiko */
   .input__field--yoshiko {
@@ -137,7 +175,5 @@
     background-color: transparent;
     border-color: #00ACD4;
   }
-
-
 
 }
