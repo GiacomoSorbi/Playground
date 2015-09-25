@@ -141,7 +141,7 @@
                 <div id="input-contact" class="col-md-10 col-md-offset-1">
 
                     <form id="contact_us" class="input input-contact input--yoshiko" role="form"
-                          action="emailSender.php" method="post">
+                          action="https://veruscript.com/api/mailer" method="post">
 
                         <div class="col-md-3 single-input-contact">
                             <input class="input__field input__field--yoshiko" type="text" id="firstName">
@@ -149,11 +149,11 @@
                                 <span class="input__label-content input__label-content--yoshiko"
                                       data-content="Your Name">Your Name</span>
                             </label>
-
-                            <div id="messagemessage" style="display: none"><i class="fa fa-check-circle"></i> Thank you
-                                for subscribing to our
-                                newsletter
+                            <div id="firstmessage" style="visibility: hidden"><i class="fa fa-check-triangle"></i> Please provide a valid first name
                             </div>
+                        </div>
+
+
                         </div>
 
                         <div class="col-md-3 single-input-contact">
@@ -162,7 +162,10 @@
                                 <span class="input__label-content input__label-content--yoshiko"
                                       data-content="Your Last Name">Your Last Name</span>
                             </label>
+                            <div id="lastmessage" style="visibility: hidden"><i class="fa fa-check-triangle"></i> Please provide a valid last name
+                            </div>
                         </div>
+
 
                         <div class="col-md-3 single-input-contact">
                             <input class="input__field input__field--yoshiko" type="text" id="email">
@@ -170,6 +173,8 @@
                                 <span class="input__label-content input__label-content--yoshiko"
                                       data-content="Your email">Your email</span>
                             </label>
+                            <div id="emailmessage" style="visibility: hidden"><i class="fa fa-check-triangle"></i> Please provide a valid email
+                            </div>
                         </div>
 
                         <div class="clear"></div>
@@ -177,10 +182,12 @@
                         <textarea class="input__field input__field--yoshiko" rows="5" cols="60"
                                   placeholder="Write your message" id="message"></textarea>
 
-                        <!--<button class="btn-sent-form" type="submit" onclick="submitNewsletter()" for="subform">-->
-                            <!--Sent a message-->
-                        <!--</button>-->
-                        <input type="submit" value="invia" />
+                        <div id="messagemessage" style="visibility: hidden"><i class="fa fa-check-triangle"></i> Please, provide a valid message
+                        </div>
+
+                        <button class="btn-sent-form" onclick="contactUs()" for="subform">
+                            Send a message
+                        </button>
 
                     </form>
 
