@@ -503,6 +503,10 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
     padding: 10px 0;
     color: #F39C12;
     background: rgba(255, 255, 255, 0.9); }
+  #form-mailing .error-contact, #contact-us .error-contact {
+    border: none;
+    padding: 10px 0;
+    color: #AE0505; }
   #form-mailing .confirm, #contact-us .confirm {
     border: 1px solid;
     padding: 10px 0;

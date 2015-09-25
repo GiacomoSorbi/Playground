@@ -46,21 +46,26 @@ $(function() {
         });
     }
 
-    //suppressing the return key default behaviour on the newsletter form
-    $('#contact-us').bind("keypress", function(e) {
+    //managing effect on the about page
+    if (document.getElementById('contact-us')){
         var box1=document.getElementById('firstmessage');
         var box2=document.getElementById('lastmessage');
         var box3=document.getElementById('emailmessage');
         var box4=document.getElementById('messagemessage');
-        box1.style.visibility='hidden';
-        box2.style.visibility='hidden';
-        box3.style.visibility='hidden';
-        box4.style.visibility='hidden';
-        if (e.keyCode == 13) {
-            e.preventDefault();
-            contactUs();
-        }
-    });
+        //suppressing the return key default behaviour on the newsletter form
+        $('#contact-us').bind("keypress", function(e) {
+            box1.style.visibility='hidden';
+            box2.style.visibility='hidden';
+            box3.style.visibility='hidden';
+            box4.style.visibility='hidden';
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                contactUs();
+            }
+        });
+    }
+
+
 
     //overlay menu event listener
     $('#toggle').click(function() {
@@ -118,7 +123,7 @@ function contactUs() {
     var msgbox1=document.getElementById('firstName');
     if (msgbox1.value==""){
         ok=false;
-        box1.className = 'error-sent';
+        box1.className = 'error-contact';
         box1.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid First Name';
         box1.style.visibility='visible';
     }
@@ -126,7 +131,7 @@ function contactUs() {
     var msgbox2=document.getElementById('lastName');
     if (msgbox2.value==""){
         ok=false;
-        box2.className = 'error-sent';
+        box2.className = 'error-contact';
         box2.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid Last Name';
         box2.style.visibility='visible';
     }
@@ -134,7 +139,7 @@ function contactUs() {
     var msgbox3=document.getElementById('email');
     if (msgbox3.value==""){
         ok=false;
-        box3.className = 'error-sent';
+        box3.className = 'error-contact';
         box3.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid Email';
         box3.style.visibility='visible';
     }
@@ -142,7 +147,7 @@ function contactUs() {
     var msgbox4=document.getElementById('message');
     if (msgbox4.value==""){
         ok=false;
-        box4.className = 'error-sent';
+        box4.className = 'error-contact';
         box4.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid message';
         box4.style.visibility='visible';
     }
@@ -162,7 +167,7 @@ function contactUs() {
             .fail(function( jqXHR, textStatus ) {
                 var box=document.getElementById('messagemessage');
                 msg='';
-                box.className = 'error-sent';
+                box.className = 'error-contact';
                 box.innerHTML = '<i class="fa fa-exclamation-triangle"></i> We are sorry, but a problem has occurred; please, try again later';
                 box.style.display = 'block';
             });
