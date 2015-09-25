@@ -226,8 +226,8 @@
                 <h2 class="">ARE YOU INTERESTED?</h2>
 
                 <p>Join our community and discover a new publishing world</p>
-                <form class="input input--yoshiko">
-					<input class="input__field input__field--yoshiko" type="text" id="subscribe"><button class="fa fa-arrow-right"></button><br/>
+                <form id="subform" class="input input--yoshiko" action="https://veruscript.com/api/newsletter/subscribe" method="post">
+					<input class="input__field input__field--yoshiko" type="text" id="subscribe"><button class="fa fa-arrow-right" onclick="document.getElementById('subform').submit()"></button><br/>
                     <label class="input__label input__label--yoshiko" for="subscribe">
                         <span class="input__label-content input__label-content--yoshiko" data-content="Email">Email</span>
                     </label>
