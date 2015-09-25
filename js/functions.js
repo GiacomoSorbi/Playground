@@ -52,21 +52,32 @@ $(function() {
 });
 
 function submitNewsletter() {
+    //handles the newsletter subcription on the home page
     $.ajax({
         method: "POST",
         url: "https://alpha.veruscript.com/api/newsletter/subscribe",
         data: {email: $("#subscribe").val()}
 
     })
-        .done(function (msg) {
+        .done(function (JSmsg) {
             var box=document.getElementById('submessage');
-            box.className = 'confirm';
-            box.innerHTML = '<i class="fa fa-check-circle"></i> Thank you for subscribing to our newsletter';
-            box.style.display = 'block';
+            var msg='';
+            if (error in JSmsg) msg=JSmsg.error.message;
+            if (msg.indexOf('List_AlreadySubscribed')!=-1){
+                box.className = 'error-already';
+                box.innerHTML = '<i class="fa fa-times-circle"></i> Your email is already in our database';
+                box.style.display = 'block';
+            }
+            else{
+                box.className = 'confirm';
+                box.innerHTML = '<i class="fa fa-check-circle"></i> Thank you for subscribing to our newsletter';
+                box.style.display = 'block';
+            }
         })
         .fail(function( jqXHR, textStatus ) {
             var box=document.getElementById('submessage');
-            msg='';
+            console.log(JSON.stringify(jqXHR),textStatus);
+            var msg=JSON.stringify(jqXHR);
             if (msg.indexOf('List_AlreadySubscribed')!=-1){
                 box.className = 'error-already';
                 box.innerHTML = '<i class="fa fa-times-circle"></i> Your email is already in our database';
@@ -74,8 +85,31 @@ function submitNewsletter() {
             }
             else{
                 box.className = 'error-sent';
-                box.innerHTML = '<i class="fa fa-times-circle"></i> We are sorry, but a problem as occurred; please, try again later';
+                box.innerHTML = '<i class="fa fa-exclamation-triangle"></i> We are sorry, but a problem has occurred; please, try again later';
                 box.style.display = 'block';
             }
+        });
+}
+
+function contactUs() {
+    //handles the newsletter subcription on the home page
+    $.ajax({
+        method: "POST",
+        url: "veruscript.com/api/mailer",
+        data: {firstName: $("#firstName").val(), lastName: $("#lastName").val(), email: $("#email").val(), message: $("#message").val()}
+
+    })
+        .done(function (msg) {
+            var box=document.getElementById('submessage');
+            box.className = 'confirm';
+            box.innerHTML = '<i class="fa fa-check-circle"></i> Thank you for contacting us';
+            box.style.display = 'block';
+        })
+        .fail(function( jqXHR, textStatus ) {
+            var box=document.getElementById('submessage');
+            msg='';
+            box.className = 'error-sent';
+            box.innerHTML = '<i class="fa fa-exclamation-triangle"></i> We are sorry, but a problem has occurred; please, try again later';
+            box.style.display = 'block';
         });
 }
