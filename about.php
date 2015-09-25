@@ -141,7 +141,7 @@
                 <div id="input-contact" class="col-md-10 col-md-offset-1">
 
                     <form id="contact_us" class="input input-contact input--yoshiko" role="form"
-                          action="https://veruscript.com/api/mailer" method="post">
+                          action="emailSender.php" method="post">
 
                         <div class="col-md-3 single-input-contact">
                             <input class="input__field input__field--yoshiko" type="text" id="firstName">
@@ -177,9 +177,10 @@
                         <textarea class="input__field input__field--yoshiko" rows="5" cols="60"
                                   placeholder="Write your message" id="message"></textarea>
 
-                        <button class="btn-sent-form" type="submit" onclick="submitNewsletter()" for="subform">
-                            Sent a message
-                        </button>
+                        <!--<button class="btn-sent-form" type="submit" onclick="submitNewsletter()" for="subform">-->
+                            <!--Sent a message-->
+                        <!--</button>-->
+                        <input type="submit" value="invia" />
 
                     </form>
 
