@@ -27,8 +27,20 @@ $(function() {
     //suppressing the return key default behaviour
     $('form').bind("keypress", function(e) {
         if (e.keyCode == 13) {
+            var msgBox=document.getElementById('subscribe');
+            var box=document.getElementById('submessage');
+            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            var validMail = re.test(msgBox.value);
             e.preventDefault();
             submitNewsletter();
+            if (!validMail){
+                box.className = 'error-email';
+                box.innerHTML = '<i class="fa fa-times-circle"></i> Please enter a valid email';
+                box.style.display = 'block';
+            }
+            else {
+                submitNewsletter();
+            }
         }
     });
 
