@@ -71,9 +71,9 @@ $(function() {
         });
 
         msgBox1.onblur = function () {
-            console.log("pippi");
-            if (msgBox1.value == "") {
-                msgBox1.classList.remove('input--filled');
+            console.log(msgBox1.value);
+            if (msgBox1.value != "") {
+                msgBox1.parentNode.classList.remove('input--filled');
                 box1.style.visibility = 'hidden';
             }
         };
