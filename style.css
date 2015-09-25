@@ -691,22 +691,35 @@ COMMON ELEMENTS
   left: 45%;
   margin-left: 15px; }
 
-.intro-body, .process-body, .joinus-body, .intro-contact {
+.intro-body, .process-body, .joinus-body, .intro-contact, .about-body {
   text-align: center; }
-  .intro-body h3, .process-body h3, .joinus-body h3, .intro-contact h3 {
+  .intro-body h3, .process-body h3, .joinus-body h3, .intro-contact h3, .about-body h3 {
     font-size: 20px;
     color: #373C3F;
     font-weight: 300;
     margin-bottom: 50px; }
-  .intro-body p, .process-body p, .joinus-body p, .intro-contact p {
+  .intro-body p, .process-body p, .joinus-body p, .intro-contact p, .about-body p {
     margin-bottom: 40px; }
-  .intro-body ul li, .process-body ul li, .joinus-body ul li, .intro-contact ul li {
+  .intro-body ul li, .process-body ul li, .joinus-body ul li, .intro-contact ul li, .about-body ul li {
     list-style: none;
     padding-right: 10px; }
-  .intro-body li:before, .process-body li:before, .joinus-body li:before, .intro-contact li:before {
+  .intro-body li:before, .process-body li:before, .joinus-body li:before, .intro-contact li:before, .about-body li:before {
     content: "• ";
     color: #00ACD4;
     padding-right: 10px; }
+
+.about-body {
+  text-align: left; }
+  .about-body h2 {
+    text-align: center; }
+  .about-body p.big-sentence {
+    font-size: 25px;
+    font-weight: 300;
+    color: #00ACD4;
+    line-height: 40px;
+    border-left: 1px solid #00ACD4;
+    padding: 15px;
+    margin-left: 15px; }
 
 .diagram {
   display: flex;
@@ -715,14 +728,22 @@ COMMON ELEMENTS
 .legend {
   margin: auto 0; }
 
+.legend ul {
+  padding-left: 20px; }
+
 ul li[id^="diagram-legend-"] {
   position: relative;
   list-style: none;
   padding-left: 50px;
+  padding-bottom: 10px;
   line-height: 20px;
   font-size: 13px;
   text-align: left;
-  margin-bottom: 60px; }
+  margin-bottom: 40px; }
+
+ul li[id^="diagram-legend-"] ul {
+  margin-left: 5px;
+  padding-left: 5px; }
 
 li[id^="diagram-legend-"]:before {
   content: none; }
