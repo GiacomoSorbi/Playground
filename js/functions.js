@@ -94,7 +94,7 @@ $(function() {
                 var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
                 var validMail = re.test(msgBox3.value);
                 if (!validMail) {
-                    box3.className = 'error-email';
+                    box3.className = 'error-contact';
                     box3.innerHTML = '<i class="fa fa-times-circle"></i> Please enter a valid email';
                     box3.style.visibility = 'visible';
                 }
@@ -152,7 +152,7 @@ function contactUs() {
     if (msgbox1.value==""){
         ok=false;
         box1.className = 'error-contact';
-        box1.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid First Name';
+        box1.innerHTML = '<i class="fa fa-times-circle"></i> Please enter your First Name';
         box1.style.visibility='visible';
     }
     var box2=document.getElementById('lastmessage');
@@ -160,7 +160,7 @@ function contactUs() {
     if (msgbox2.value==""){
         ok=false;
         box2.className = 'error-contact';
-        box2.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid Last Name';
+        box2.innerHTML = '<i class="fa fa-times-circle"></i> Please enter your Surname';
         box2.style.visibility='visible';
     }
     var box3=document.getElementById('emailmessage');
@@ -168,15 +168,15 @@ function contactUs() {
     if (msgbox3.value==""){
         ok=false;
         box3.className = 'error-contact';
-        box3.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid Email';
+        box3.innerHTML = '<i class="fa fa-times-circle"></i> Please enter your valid Email';
         box3.style.visibility='visible';
     }
     var box4=document.getElementById('messagemessage');
     var msgbox4=document.getElementById('message');
     if (msgbox4.value==""){
         ok=false;
-        box4.className = 'error-contact';
-        box4.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Please provide us a valid message';
+        box4.className = 'error-contact textmessage';
+        box4.innerHTML = '<i class="fa fa-times-circle"></i> Please write a message';
         box4.style.visibility='visible';
     }
     if (ok){
