@@ -1,0 +1,33 @@
+/*****************************
+ HEADER PAGES + TITLE + SUBMENU
+******************************/
+
+#page-header {
+  background-image: url("images/header/header-1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 250px;
+
+  .container {z-index: 1}
+
+  .hero {
+    background-color: #000;
+    opacity: .7;
+    position: absolute;
+    top: 0; left: 0;
+    width:100%;
+    height: 250px;
+    display: block;
+  }
+
+  h1 {
+    padding-top: 110px;
+    color: #fff;
+    font-size: 45px;
+    font-family: "museo-slab";
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+}

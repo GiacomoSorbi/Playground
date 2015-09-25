@@ -1,0 +1,27 @@
+/*****************************
+MEDIA QUERY RESPONSIVE RESPONSIVE
+******************************/
+
+@media only screen and (min-width: 1200px) {
+  .button_container, #overlay, .button-user {
+    display: none;
+  }
+  #nav-tools-section, #nav-page-section {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .button_container {
+    display: block;
+  }
+  .button-user {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  #nav-tools-section, #nav-page-section, .separator-menu {
+    display: none;
+  }
+}
+
+/* TODO: hide login login/registration below query tablet and mobile  */
