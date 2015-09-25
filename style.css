@@ -603,6 +603,8 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
   #contact-us .input--filled .input__field--yoshiko {
     background-color: transparent;
     border-color: #00ACD4; }
+  #form-mailing input:-webkit-autofill, #contact_us input:-webkit-autofill {
+    background-color: rgba(255, 255, 255, 0.7); }
 
 html,
 body {

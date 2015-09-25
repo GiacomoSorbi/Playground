@@ -146,27 +146,36 @@
                         <div class="col-md-3 single-input-contact">
                             <input class="input__field input__field--yoshiko" type="text" id="firstName">
                             <label class="input__label input__label--yoshiko" for="firstName">
-                                <span class="input__label-content input__label-content--yoshiko" data-content="Your Name">Your Name</span>
+                                <span class="input__label-content input__label-content--yoshiko"
+                                      data-content="Your Name">Your Name</span>
                             </label>
+
+                            <div id="messagemessage" style="display: none"><i class="fa fa-check-circle"></i> Thank you
+                                for subscribing to our
+                                newsletter
+                            </div>
                         </div>
 
                         <div class="col-md-3 single-input-contact">
                             <input class="input__field input__field--yoshiko" type="text" id="lastName">
                             <label class="input__label input__label--yoshiko" for="lastName">
-                                <span class="input__label-content input__label-content--yoshiko" data-content="Your Last Name">Your Last Name</span>
+                                <span class="input__label-content input__label-content--yoshiko"
+                                      data-content="Your Last Name">Your Last Name</span>
                             </label>
                         </div>
 
                         <div class="col-md-3 single-input-contact">
                             <input class="input__field input__field--yoshiko" type="text" id="email">
                             <label class="input__label input__label--yoshiko" for="email">
-                                <span class="input__label-content input__label-content--yoshiko" data-content="Your email">Your email</span>
+                                <span class="input__label-content input__label-content--yoshiko"
+                                      data-content="Your email">Your email</span>
                             </label>
                         </div>
 
                         <div class="clear"></div>
 
-                        <textarea class="input__field input__field--yoshiko" rows="5" cols="60" placeholder="Write your message" id="message"></textarea>
+                        <textarea class="input__field input__field--yoshiko" rows="5" cols="60"
+                                  placeholder="Write your message" id="message"></textarea>
 
                         <button class="btn-sent-form" type="submit" onclick="submitNewsletter()" for="subform">
                             Sent a message
@@ -174,10 +183,17 @@
 
                     </form>
 
-                </div>
-            </div>
 
-        </div>
+                    <div class="result">
+                        <div id="submessage" style="display: none"><i class="fa fa-check-circle"></i> Thank you for
+                            subscribing to our
+                            newsletter
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
     </section>
     <!-- [end .page-section] -->
 
