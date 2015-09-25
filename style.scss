@@ -101,7 +101,6 @@ COMMON ELEMENTS
   margin-left: 15px;
 }
 
-
 .intro-body, .process-body, .joinus-body, .intro-contact {
   text-align: center;
 
@@ -141,6 +140,8 @@ ul li[id^="diagram-legend-"] {
   text-align: left;
   margin-bottom: 60px;
 }
+li[id^="diagram-legend-"]:before {content:none}
+
 
 span.list-number {
   background-color: #00acd4;
@@ -155,6 +156,7 @@ span.list-number {
   left: 0;
   top: 5px;
 }
+
 
 .join-us {
   background: url("images/joinus-home.png") no-repeat bottom center;

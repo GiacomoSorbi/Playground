@@ -603,7 +603,7 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
   #contact-us .input--filled .input__field--yoshiko {
     background-color: transparent;
     border-color: #00ACD4; }
-  #form-mailing input:-webkit-autofill, #contact_us input:-webkit-autofill {
+  #form-mailing input:-webkit-autofill, #contact-us input:-webkit-autofill {
     background-color: rgba(255, 255, 255, 0.7); }
 
 html,
@@ -719,6 +719,9 @@ ul li[id^="diagram-legend-"] {
   font-size: 13px;
   text-align: left;
   margin-bottom: 60px; }
+
+li[id^="diagram-legend-"]:before {
+  content: none; }
 
 span.list-number {
   background-color: #00acd4;
