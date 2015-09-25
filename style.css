@@ -463,12 +463,17 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
     font-size: 13px;
     font-weight: 300;
     width: 440px; }
-  #form-mailing #error {
+  #form-mailing .error-email {
     border: 1px solid #AE0505;
     padding: 10px 0;
     color: #AE0505;
     background: rgba(255, 255, 255, 0.9); }
-  #form-mailing #confirm {
+  #form-mailing .error-already, #form-mailing .error-sent {
+    border: 1px solid #F39C12;
+    padding: 10px 0;
+    color: #F39C12;
+    background: rgba(255, 255, 255, 0.9); }
+  #form-mailing .confirm {
     border: 1px solid;
     padding: 10px 0;
     color: #25AE05;

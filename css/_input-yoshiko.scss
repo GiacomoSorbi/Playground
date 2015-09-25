@@ -46,14 +46,21 @@
     width: 440px;
   }
 
-  #error {
+  .error-email {
     border: 1px solid #AE0505;
     padding: 10px 0;
     color: #AE0505;
     background: rgba(255, 255, 255, 0.9);
   }
 
-  #confirm {
+  .error-already, .error-sent  {
+    border: 1px solid #F39C12;
+    padding: 10px 0;
+    color: #F39C12;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .confirm {
     border: 1px solid ;
     padding: 10px 0;
     color: #25AE05;
