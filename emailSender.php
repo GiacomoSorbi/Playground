@@ -1,6 +1,7 @@
 <?php
 
 require_once 'swiftmailer/lib/swift_required.php';
+
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $completeName = "$firstName $lastName";
