@@ -125,47 +125,56 @@
         </div>
     </section>
     <section class="page-section animated bkg-gray" id="contact">
+
         <div class="container">
 
-            <div class="intro-body ">
+            <div class="intro-contact">
                 <h2 class="linebottom">CONTACT US</h2>
 
                 <p>Veruscript, in our view, makes publishing cost efficient and high quality. It leaves authors in
                     control of their paper.</p>
+            </div>
 
-                <form id="contact_us" class="input input--yoshiko" role="form"
-                      action="https://veruscript.com/api/mailer" method="post">
 
-                    <div class="form-group">
-                        <input class="input__field input__field--yoshiko" type="text" id="firstName">
-                        <label class="input__label input__label--yoshiko" for="firstName">
-                                <span class="input__label-content input__label-content--yoshiko"
-                                      data-content="Your Name">Your Name</span>
-                        </label>
-                    </div>
+            <div class="row" id="contact-us">
 
-                    <div class="form-group">
-                        <input class="input__field input__field--yoshiko" type="text" id="lastName">
-                        <label class="input__label input__label--yoshiko" for="lastName">
-                                <span class="input__label-content input__label-content--yoshiko"
-                                      data-content="Your Last Name">Your Last Name</span>
-                        </label>
-                    </div>
+                <div id="input-contact" class="col-md-10 col-md-offset-1">
 
-                    <div class="form-group">
-                        <input class="input__field input__field--yoshiko" type="text" id="email">
-                        <label class="input__label input__label--yoshiko" for="email">
-                                <span class="input__label-content input__label-content--yoshiko"
-                                      data-content="Your email">Your email</span>
-                        </label>
-                    </div>
+                    <form id="contact_us" class="input input-contact input--yoshiko" role="form"
+                          action="https://veruscript.com/api/mailer" method="post">
 
-                    <div class="form-group">
-                        <textarea class="input__field input__field--yoshiko" rows="5" cols="50"
-                                  placeholder="Your message here" id="message"></textarea>
-                        <label class="input__label input__label--yoshiko" for="message"> </label>
-                    </div>
-                </form>
+                        <div class="col-md-3 single-input-contact">
+                            <input class="input__field input__field--yoshiko" type="text" id="firstName">
+                            <label class="input__label input__label--yoshiko" for="firstName">
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Your Name">Your Name</span>
+                            </label>
+                        </div>
+
+                        <div class="col-md-3 single-input-contact">
+                            <input class="input__field input__field--yoshiko" type="text" id="lastName">
+                            <label class="input__label input__label--yoshiko" for="lastName">
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Your Last Name">Your Last Name</span>
+                            </label>
+                        </div>
+
+                        <div class="col-md-3 single-input-contact">
+                            <input class="input__field input__field--yoshiko" type="text" id="email">
+                            <label class="input__label input__label--yoshiko" for="email">
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Your email">Your email</span>
+                            </label>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <textarea class="input__field input__field--yoshiko" rows="5" cols="60" placeholder="Write your message" id="message"></textarea>
+
+                        <button class="btn-sent-form" type="submit" onclick="submitNewsletter()" for="subform">
+                            Sent a message
+                        </button>
+
+                    </form>
+
+                </div>
             </div>
 
         </div>
