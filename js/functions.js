@@ -56,7 +56,7 @@ $(function() {
         var msgBox2 = document.getElementById('lastName');
         var msgBox3 = document.getElementById('email');
         //suppressing the return key default behaviour on the newsletter form
-        $('#contact_us').bind("keypress", function(e) {
+        $('#subform').bind("keypress", function(e) {
             box1.style.visibility='hidden';
             box2.style.visibility='hidden';
             box3.style.visibility='hidden';
@@ -66,12 +66,11 @@ $(function() {
                 contactUs();
             }
         });
-        $('#contact_us').on('submit', function(e){
+        $('#subform').on('submit', function(e){
             e.preventDefault();
         });
 
         msgBox1.onblur = function () {
-            console.log(msgBox1.value);
             if (msgBox1.value != "") {
                 msgBox1.parentNode.classList.remove('input--filled');
                 box1.style.visibility = 'hidden';
@@ -127,7 +126,6 @@ function submitNewsletter() {
         })
         .fail(function( jqXHR, textStatus ) {
             var box=document.getElementById('submessage');
-            console.log(JSON.stringify(jqXHR),textStatus);
             var msg=JSON.stringify(jqXHR);
             if (msg.indexOf('List_AlreadySubscribed')!=-1){
                 box.className = 'error-already';
