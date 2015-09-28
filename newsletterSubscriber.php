@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+
+require_once 'swiftmailer/lib/swift_required.php';
 
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
