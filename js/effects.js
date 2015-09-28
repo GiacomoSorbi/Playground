@@ -1,5 +1,11 @@
 var MyModule;
 $(function() {
+    
+    if (window.pageYOffset > 50) {
+        document.getElementById("main-nav").className = "scrolling";
+    } else {
+        document.getElementById("main-nav").className = "";
+    }
 
     window.addEventListener("scroll", function () {
         if (window.pageYOffset > 50) {
