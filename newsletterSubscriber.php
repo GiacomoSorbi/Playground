@@ -1,30 +1,31 @@
 <?php
 
-require_once 'swiftmailer/lib/swift_required.php';
+require __DIR__ . '/vendor/autoload.php';
 
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$completeName = "$firstName $lastName";
-$email = $_POST['email'];
-$message = $_POST['message'];
+$MailChimp = new \Drewm\MailChimp('4889cdcd18bb41740f6da6029cc0ec8d-us10');
 
-$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-    ->setUsername('contact@veruscript.com')
-    ->setPassword('(ND57lzK45)yv1w9_98B');
+$result = $MailChimp->call('lists/subscribe', array(
+    'id' => '0a33f76495',
+    'email' => array('email' => $_POST['email']),
+    'double_optin' => false
+));
 
-$mailer = Swift_Mailer::newInstance($transport);
-
-$message = Swift_Message::newInstance()
-    ->setSubject('Contact request from ' . $completeName)
-    ->setFrom(array('contact@veruscript.com'))
-    ->setTo(array('contact@veruscript.com'))
-    ->setBody("
-    name: $completeName
-    email: $email
-    message: $message
-    ");
-
-if (!$mailer->send($message, $failures)) {
-    echo "Failures:";
-    echo($failures);
+if ($result['email']) {
+    $data = array('type' => 'success', 'message' => "Thank you for subscribing to our newsletter");
+    header('HTTP/1.1 200 OK');
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode($data);
+    die();
+} elseif ($result['error']) {
+    $data = array('type' => 'error', 'message' => $result['error'], 'code' => $result['code']);
+    header('HTTP/1.1 500 Internal Server Error');
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode($data);
+    die();
+} else {
+    $data = array('type' => 'error', 'message' => 'undefined error', 'code' => '0');
+    header('HTTP/1.1 500 Internal Server Error');
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode($data);
+    die();
 }
