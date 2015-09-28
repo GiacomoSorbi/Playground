@@ -4,8 +4,7 @@ $(function() {
     if (document.getElementById("subscribe")) {
         document.getElementById("subscribe").onfocus = function () {
             document.getElementById("subscribe").parentNode.classList.add('input--filled');
-            var box = document.getElementById('submessage');
-            box.style.display = 'none';
+            document.getElementById('submessage').style.display = 'none';
         };
         document.getElementById("subscribe").onblur = function () {
             var msgBox = document.getElementById('subscribe');
@@ -70,12 +69,22 @@ $(function() {
             e.preventDefault();
         });
 
+        msgBox1.onfocus = function () {
+            msgBox1.parentNode.classList.add('input--filled');
+            box1.style.visibility = 'hidden';
+        };
+
         msgBox1.onblur = function () {
             console.log(msgBox1.value);
-            if (msgBox1.value != "") {
+            if (msgBox1.value == "") {
                 msgBox1.parentNode.classList.remove('input--filled');
                 box1.style.visibility = 'hidden';
             }
+        };
+
+        msgBox2.onfocus = function () {
+            msgBox2.parentNode.classList.add('input--filled');
+            box2.style.visibility = 'hidden';
         };
 
         msgBox2.onblur = function () {
@@ -83,6 +92,11 @@ $(function() {
                 msgBox2.parentNode.classList.remove('input--filled');
                 box2.style.visibility = 'hidden';
             }
+        };
+
+        msgBox3.onfocus = function () {
+            msgBox3.parentNode.classList.add('input--filled');
+            box3.style.visibility = 'hidden';
         };
 
         msgBox3.onblur = function () {
@@ -113,33 +127,35 @@ $(function() {
 
 function submitNewsletter() {
     //handles the newsletter subcription on the home page
-    $.ajax({
-        method: "POST",
-        url: "https://alpha.veruscript.com/api/newsletter/subscribe",
-        data: {email: $("#subscribe").val()}
+    if ($("#url").val()!="") {
+        $.ajax({
+            method: "POST",
+            url: "https://alpha.veruscript.com/api/newsletter/subscribe",
+            data: {email: $("#subscribe").val()}
 
-    })
-        .done(function (JSmsg) {
-            var box=document.getElementById('submessage');
-            box.className = 'confirm';
-            box.innerHTML = '<i class="fa fa-check-circle"></i> Thank you for subscribing to our newsletter';
-            box.style.display = 'block';
         })
-        .fail(function( jqXHR, textStatus ) {
-            var box=document.getElementById('submessage');
-            console.log(JSON.stringify(jqXHR),textStatus);
-            var msg=JSON.stringify(jqXHR);
-            if (msg.indexOf('List_AlreadySubscribed')!=-1){
-                box.className = 'error-already';
-                box.innerHTML = '<i class="fa fa-times-circle"></i> Your email is already in our database';
+            .done(function (JSmsg) {
+                var box = document.getElementById('submessage');
+                box.className = 'confirm';
+                box.innerHTML = '<i class="fa fa-check-circle"></i> Thank you for subscribing to our newsletter';
                 box.style.display = 'block';
-            }
-            else{
-                box.className = 'error-sent';
-                box.innerHTML = '<i class="fa fa-exclamation-triangle"></i> We are sorry, but a problem has occurred; please, try again later';
-                box.style.display = 'block';
-            }
-        });
+            })
+            .fail(function (jqXHR, textStatus) {
+                var box = document.getElementById('submessage');
+                console.log(JSON.stringify(jqXHR), textStatus);
+                var msg = JSON.stringify(jqXHR);
+                if (msg.indexOf('List_AlreadySubscribed') != -1) {
+                    box.className = 'error-already';
+                    box.innerHTML = '<i class="fa fa-times-circle"></i> Your email is already in our database';
+                    box.style.display = 'block';
+                }
+                else {
+                    box.className = 'error-sent';
+                    box.innerHTML = '<i class="fa fa-exclamation-triangle"></i> We are sorry, but a problem has occurred; please, try again later';
+                    box.style.display = 'block';
+                }
+            });
+    }
 }
 
 function contactUs() {
@@ -179,7 +195,7 @@ function contactUs() {
         box4.innerHTML = '<i class="fa fa-times-circle"></i> Please write a message';
         box4.style.visibility='visible';
     }
-    if (ok){
+    if (ok && $("#url").val()!=""){
         $.ajax({
             method: "POST",
             url: "../emailSender.php",
