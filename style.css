@@ -555,7 +555,7 @@ MEDIA QUERY RESPONSIVE RESPONSIVE
     padding: 1.6em 0;
     width: 100%; }
   #form-mailing textarea, #contact-us textarea {
-    margin: 30px 0;
+    margin: 30px 10px 30px 0px;
     color: #373c3f;
     resize: vertical;
     float: none; }

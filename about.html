@@ -170,11 +170,10 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 single-input-contact">
-
-                            <input class="input__field input__field--yoshiko" type="text" name="lastName" id="lastName" placeholder="Your Surname">
+                        <div class="col-md-3 input input--yoshiko single-input-contact">
+                            <input class="input__field input__field--yoshiko" type="text" name="lastName" id="lastName">
                             <label class="input__label input__label--yoshiko" for="lastName">
-                                <span class="input__label-content input__label-content--yoshiko" data-content="Your Surname">&nbsp;</span>
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Your Surname">Your Surname</span>
                             </label>
 
                             <div class="clear"></div>
@@ -183,10 +182,10 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 single-input-contact">
-                            <input class="input__field input__field--yoshiko" type="text" name="email" id="email" placeholder="Your email">
+                        <div class="col-md-3 input input--yoshiko single-input-contact">
+                            <input class="input__field input__field--yoshiko" type="text" name="email" id="email">
                             <label class="input__label input__label--yoshiko" for="email">
-                                <span class="input__label-content input__label-content--yoshiko" data-content="Your email">&nbsp;</span>
+                                <span class="input__label-content input__label-content--yoshiko" data-content="Your email">Your email</span>
                             </label>
 
                             <div class="clear"></div>
@@ -197,16 +196,16 @@
                         <input type="text" name="url" style="display:none" id="url"/>
 
                         <div class="clear"></div>
-
-                        <textarea class="input__field input__field--yoshiko" rows="5" cols="60" placeholder="Write your message" name="message" id="message"></textarea>
-
+                        <div class="col-md-12 input input--yoshiko">
+                            <textarea class="input__field input__field--yoshiko" rows="5" placeholder="Write your message" name="message" id="message"></textarea>
+                        </div>
                         <div class="clear"></div>
 
                         <div id="messagemessage" style="visibility: hidden">
                             <i class="fa fa-check-circle"></i> Please, provide a valid message
                         </div>
 
-                        <button class="btn-sent-form" onclick="contactUs()" for="subform">Send a message</button>
+                        <button class="btn-sent-form" onclick="contactUs()" for="subform" id="button-contact">Send a message</button>
 
                     </form>
 
