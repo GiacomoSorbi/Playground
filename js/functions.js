@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     //input-field focus event listener
     if (document.getElementById("subscribe")) {
@@ -23,7 +23,7 @@ $(function() {
                 }
             }
         };
-        
+
         //suppressing the return key default behaviour on the newsletter form
         $('#subform').bind("keypress", function (e) {
             if (e.keyCode == 13) {
@@ -112,40 +112,39 @@ $(function() {
 
 
 //overlay menu event listener
-$('#toggle').click(function () {
-    $(this).toggleClass('active');
-    $('#overlay').toggleClass('open');
-});
+    $('#toggle').click(function () {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+    });
 })
 ;
 
 function submitNewsletter() {
     //handles the newsletter subcription on the home page
-    if ($("#url").val() != "") {
+    if ($("#url").val() == "") {
         $.ajax({
             method: "POST",
-            url: "https://alpha.veruscript.com/api/newsletter/subscribe",
+            url: "../newsletterSubscriber.php",
             data: {email: $("#subscribe").val()}
 
         })
             .done(function (JSmsg) {
                 var box = document.getElementById('submessage');
                 box.className = 'confirm';
-                box.innerHTML = '<i class="fa fa-check-circle"></i> Thank you for subscribing to our newsletter';
+                box.innerHTML = '<i class="fa fa-check-circle"></i>' + JSmsg.message;
                 box.style.display = 'block';
             })
-            .fail(function (jqXHR, textStatus) {
+            .fail(function (jqXHR) {
                 var box = document.getElementById('submessage');
-                console.log(JSON.stringify(jqXHR), textStatus);
-                var msg = JSON.stringify(jqXHR);
-                if (msg.indexOf('List_AlreadySubscribed') != -1) {
+                console.log(jqXHR);
+                if (jqXHR.responseJSON.code != 0) {
                     box.className = 'error-already';
-                    box.innerHTML = '<i class="fa fa-times-circle"></i> Your email is already in our database';
+                    box.innerHTML = '<i class="fa fa-times-circle"></i>' + jqXHR.responseJSON.message;
                     box.style.display = 'block';
                 }
                 else {
                     box.className = 'error-sent';
-                    box.innerHTML = '<i class="fa fa-exclamation-triangle"></i> We are sorry, but a problem has occurred; please, try again later';
+                    box.innerHTML = '<i class="fa fa-exclamation-triangle"></i>' + jqXHR.responseJSON.message;
                     box.style.display = 'block';
                 }
             });
@@ -188,8 +187,8 @@ function contactUs() {
         msgBox4.innerHTML = '<i class="fa fa-times-circle"></i> Please write a message';
         msgBox4.style.visibility = 'visible';
     }
-    if (ok && $("#url").val() != "") {
-        var btn=document.getElementById('button-contact');
+    if (ok && $("#url").val() == "") {
+        var btn = document.getElementById('button-contact');
         btn.innerHTML = "";
         $.ajax({
             method: "POST",
